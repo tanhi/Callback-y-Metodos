@@ -22,45 +22,48 @@ function miMap(array, callback){
     for (var i = 0; i < array.length; i++) {
 		callback(array[i]);
 	}
+	console.log(newArray);
 }
 
 miMap([2,4,6,8,10],newMap);
 
-function newMap(item){
+function newMap(item ){
   var div = (item)/2;
   newArray.push(div)
-  console.log(newArray);
+
 }
 
 //3 ) Crea tu propia función filter que funcione igual a Array.filter. Algo asi:
-var evenNumbers  = [];
-function miFilter(array,filter){
-    for(var i = 0; i<array.length; i++)
+var evenNumbers=[];
+
+function miFilter(array,callback){
+    for(var i = 0; i<array.length; i++){
 		callback(array[i]);
     }
-myFilter([1,2,3,4,5,6,7,8,9,10],filter);
+    console.log(evenNumbers);
+  }
+
+miFilter([1,2,3,4,5,6,7,8,9,10],filter);
 
 function filter(item){
         if((item)%2===0){
             evenNumbers.push(item);
-            console.log(evenNumbers);
         }
 
       }
 
 
-
 //4 ) Crea tu propia función reduce que funcione igual a Array.reduce. Algo asi:
 var getSum = 0;
-function miReduce(array, reduce){
+function miReduce(array, callback){
     for(var i = 0; i<array.length; i++)
 		callback(array[i]);
+		console.log(getSum);
     }
-myReduce([2,4,6,8,10],reduce);
+miReduce([2,4,6,8,10],reduce);
 
 function reduce(item){
         getSum += (item);
-				console.log(getSum);
     }
 
 
